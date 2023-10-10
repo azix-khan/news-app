@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             overflow: TextOverflow.ellipsis,
                                             style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.w700,
-                                                fontSize: 17),
+                                                fontSize: 16),
                                           ),
                                         ),
                                         const Spacer(),
@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 snapshot.data!.articles![index]
                                                     .source!.name
                                                     .toString(),
-                                                maxLines: 2,
+                                                maxLines: 1,
                                                 overflow: TextOverflow.ellipsis,
                                                 style: GoogleFonts.poppins(
                                                     fontWeight: FontWeight.w600,
