@@ -41,14 +41,14 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             Text(
               'TOP HEADLINES',
-              style: GoogleFonts.anton(letterSpacing: .6, color: Colors.amber),
+              style: GoogleFonts.anton(letterSpacing: .6, color: Colors.blue),
             ),
             SizedBox(
               height: height * 0.04,
             ),
             // ignore: prefer_const_constructors
-            SpinKitChasingDots(
-              color: Colors.amber,
+            SpinKitWave(
+              color: Colors.blue,
               size: 40,
             )
           ],
