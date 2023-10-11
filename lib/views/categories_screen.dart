@@ -18,6 +18,8 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
   NewsViewModel newsViewModel = NewsViewModel();
   final format = DateFormat('MMM dd, yyyy');
   String categoryName = 'general';
+  int btnSelected = 0;
+  String selectedCategory = 'General';
 
   List<String> categoriesList = [
     'General',
@@ -43,32 +45,29 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 scrollDirection: Axis.horizontal,
                 itemCount: categoriesList.length,
                 itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {
-                      categoryName = categoriesList[index];
-                      setState(() {});
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 12),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: categoryName == categoriesList[index]
-                              ? Colors.blue
-                              : Colors.grey,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 12),
-                          child: Center(
-                            child: Text(
-                              categoriesList[index].toString(),
-                              style: GoogleFonts.poppins(
-                                  fontSize: 13, color: Colors.white),
-                            ),
-                          ),
-                        ),
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 8),
+                    child: Container(
+                        child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)),
+                          backgroundColor: index == btnSelected
+                              ? Colors.blueAccent
+                              : Colors.grey),
+                      onPressed: () {
+                        btnSelected = index;
+                        selectedCategory = categoriesList[index];
+                        setState(() {});
+                      },
+                      child: Text(
+                        categoriesList[index],
+                        style: GoogleFonts.poppins(
+                            fontSize: 13,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600),
                       ),
-                    ),
+                    )),
                   );
                 },
               ),
@@ -146,7 +145,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                                                 maxLines: 3,
                                                 overflow: TextOverflow.ellipsis,
                                                 style: GoogleFonts.poppins(
-                                                    color: Colors.black54,
+                                                    color: Colors.blue,
                                                     fontSize: 14,
                                                     fontWeight:
                                                         FontWeight.w700),

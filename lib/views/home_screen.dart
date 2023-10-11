@@ -207,7 +207,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 overflow: TextOverflow.ellipsis,
                                                 style: GoogleFonts.poppins(
                                                     fontWeight: FontWeight.w600,
-                                                    fontSize: 13),
+                                                    fontSize: 13,
+                                                    color: Colors.blue),
                                               ),
                                               Text(
                                                 format.format(dateTime),
@@ -302,7 +303,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               maxLines: 3,
                                               overflow: TextOverflow.ellipsis,
                                               style: GoogleFonts.poppins(
-                                                  color: Colors.black54,
+                                                  color: Colors.blue,
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.w700),
                                             ),
