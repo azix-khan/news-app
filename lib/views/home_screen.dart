@@ -12,9 +12,21 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+enum FilterList {
+  bbcNews,
+  aryNews,
+  cnn,
+  alJazeera,
+  abcNews,
+  entertainmentWeekly,
+  news24
+}
+
 class _HomeScreenState extends State<HomeScreen> {
   NewsViewModel newsViewModel = NewsViewModel();
+  FilterList? selectedMenu;
   final format = DateFormat('MMM dd, yyyy');
+  String name = 'bbc-news';
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.sizeOf(context).height * 1;
@@ -32,6 +44,66 @@ class _HomeScreenState extends State<HomeScreen> {
             style:
                 GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.w700)),
         centerTitle: true,
+        actions: [
+          PopupMenuButton<FilterList>(
+            initialValue: selectedMenu,
+            icon: const Icon(
+              Icons.more_vert,
+              color: Colors.black,
+            ),
+            onSelected: (FilterList item) {
+              if (FilterList.bbcNews.name == item.name) {
+                name = 'bbc-news';
+              }
+              if (FilterList.aryNews.name == item.name) {
+                name = 'ary-news';
+              }
+              if (FilterList.alJazeera.name == item.name) {
+                name = 'al-jazeera-english';
+              }
+              if (FilterList.abcNews.name == item.name) {
+                name = 'abc-news';
+              }
+              if (FilterList.entertainmentWeekly.name == item.name) {
+                name = 'entertainment-weekly';
+              }
+              if (FilterList.news24.name == item.name) {
+                name = 'news24';
+              }
+
+              // NewsViewModel().fetchNewsChannelHeadlinesApi(name);
+              setState(() {
+                selectedMenu = item;
+              });
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<FilterList>>[
+              const PopupMenuItem<FilterList>(
+                value: FilterList.bbcNews,
+                child: Text('BBC News'),
+              ),
+              const PopupMenuItem<FilterList>(
+                value: FilterList.aryNews,
+                child: Text('ARY News'),
+              ),
+              const PopupMenuItem<FilterList>(
+                value: FilterList.alJazeera,
+                child: Text('Aljazeera News'),
+              ),
+              const PopupMenuItem<FilterList>(
+                value: FilterList.abcNews,
+                child: Text('ABC News'),
+              ),
+              const PopupMenuItem<FilterList>(
+                value: FilterList.entertainmentWeekly,
+                child: Text('Entertainment Weekly'),
+              ),
+              const PopupMenuItem<FilterList>(
+                value: FilterList.news24,
+                child: Text('News 24'),
+              ),
+            ],
+          ),
+        ],
       ),
       body: ListView(
         children: [
@@ -39,7 +111,8 @@ class _HomeScreenState extends State<HomeScreen> {
             height: height * .55,
             width: width,
             child: FutureBuilder(
-                future: newsViewModel.fetchNewsChannelHeadlinesApi(),
+                future: newsViewModel.fetchNewsChannelHeadlinesApi(name),
+                // future: null,
                 builder: (BuildContext context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return const SpinKitSpinningLines(
