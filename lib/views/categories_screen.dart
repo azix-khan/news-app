@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:news_app/models/categories_news_model.dart';
 import 'package:news_app/view_models/news_view_model.dart';
-import 'package:news_app/views/news_details_screen.dart';
 
 class CategoriesScreen extends StatefulWidget {
   const CategoriesScreen({Key? key}) : super(key: key);
@@ -118,29 +117,29 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                             .toString());
                         return InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => NewsDetailsScreen(
-                                    newsImage: snapshot
-                                        .data!.articles![index].urlToImage
-                                        .toString(),
-                                    newsTitle: snapshot.data!.articles![index].title
-                                        .toString(),
-                                    newsDate: snapshot
-                                        .data!.articles![index].publishedAt
-                                        .toString(),
-                                    author: snapshot.data!.articles![index].author
-                                        .toString(),
-                                    description: snapshot
-                                        .data!.articles![index].description
-                                        .toString(),
-                                    content: snapshot.data!.articles![index].content
-                                        .toString(),
-                                    source: snapshot.data!.articles![index].source!.name
-                                        .toString()),
-                              ),
-                            );
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) => NewsDetailsScreen(
+                            //         newsImage: snapshot
+                            //             .data!.articles![index].urlToImage
+                            //             .toString(),
+                            //         newsTitle: snapshot.data!.articles![index].title
+                            //             .toString(),
+                            //         newsDate: snapshot
+                            //             .data!.articles![index].publishedAt
+                            //             .toString(),
+                            //         author: snapshot.data!.articles![index].author
+                            //             .toString(),
+                            //         description: snapshot
+                            //             .data!.articles![index].description
+                            //             .toString(),
+                            //         content: snapshot.data!.articles![index].content
+                            //             .toString(),
+                            //         source: snapshot.data!.articles![index].source!.name
+                            //             .toString()),
+                            //   ),
+                            // );
                           },
                           child: Padding(
                             padding: const EdgeInsets.only(bottom: 15),

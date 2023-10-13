@@ -292,31 +292,31 @@ class _HomeScreenState extends State<HomeScreen> {
                               .toString());
                           return InkWell(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => NewsDetailsScreen(
-                                      newsImage: snapshot
-                                          .data!.articles![index].urlToImage
-                                          .toString(),
-                                      newsTitle: snapshot
-                                          .data!.articles![index].title
-                                          .toString(),
-                                      newsDate: snapshot
-                                          .data!.articles![index].publishedAt
-                                          .toString(),
-                                      author: snapshot
-                                          .data!.articles![index].author
-                                          .toString(),
-                                      description: snapshot
-                                          .data!.articles![index].description
-                                          .toString(),
-                                      content: snapshot
-                                          .data!.articles![index].content
-                                          .toString(),
-                                      source: snapshot.data!.articles![index].source!.name.toString()),
-                                ),
-                              );
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(
+                              //     builder: (context) => NewsDetailsScreen(
+                              //         newsImage: snapshot
+                              //             .data!.articles![index].urlToImage
+                              //             .toString(),
+                              //         newsTitle: snapshot
+                              //             .data!.articles![index].title
+                              //             .toString(),
+                              //         newsDate: snapshot
+                              //             .data!.articles![index].publishedAt
+                              //             .toString(),
+                              //         author: snapshot
+                              //             .data!.articles![index].author
+                              //             .toString(),
+                              //         description: snapshot
+                              //             .data!.articles![index].description
+                              //             .toString(),
+                              //         content: snapshot
+                              //             .data!.articles![index].content
+                              //             .toString(),
+                              //         source: snapshot.data!.articles![index].source!.name.toString()),
+                              //   ),
+                              // );
                             },
                             child: Padding(
                               padding: const EdgeInsets.only(bottom: 15),
