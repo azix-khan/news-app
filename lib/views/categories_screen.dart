@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:news_app/models/categories_news_model.dart';
 import 'package:news_app/view_models/news_view_model.dart';
+import 'package:news_app/views/news_details_screen.dart';
 
 class CategoriesScreen extends StatefulWidget {
   const CategoriesScreen({Key? key}) : super(key: key);
@@ -44,10 +45,22 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text(selectedCategory),
+        title: Text(
+          selectedCategory,
+          style:
+              const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
+        leading: InkWell(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: const Icon(
+              Icons.arrow_back_ios_new,
+              color: Colors.black,
+            )),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -117,29 +130,29 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                             .toString());
                         return InkWell(
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => NewsDetailsScreen(
-                            //         newsImage: snapshot
-                            //             .data!.articles![index].urlToImage
-                            //             .toString(),
-                            //         newsTitle: snapshot.data!.articles![index].title
-                            //             .toString(),
-                            //         newsDate: snapshot
-                            //             .data!.articles![index].publishedAt
-                            //             .toString(),
-                            //         author: snapshot.data!.articles![index].author
-                            //             .toString(),
-                            //         description: snapshot
-                            //             .data!.articles![index].description
-                            //             .toString(),
-                            //         content: snapshot.data!.articles![index].content
-                            //             .toString(),
-                            //         source: snapshot.data!.articles![index].source!.name
-                            //             .toString()),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => NewsDetailsScreen(
+                                    newsImage: snapshot
+                                        .data!.articles![index].urlToImage
+                                        .toString(),
+                                    newsTitle: snapshot.data!.articles![index].title
+                                        .toString(),
+                                    newsDate: snapshot
+                                        .data!.articles![index].publishedAt
+                                        .toString(),
+                                    author: snapshot.data!.articles![index].author
+                                        .toString(),
+                                    description: snapshot
+                                        .data!.articles![index].description
+                                        .toString(),
+                                    content: snapshot.data!.articles![index].content
+                                        .toString(),
+                                    source: snapshot.data!.articles![index].source!.name
+                                        .toString()),
+                              ),
+                            );
                           },
                           child: Padding(
                             padding: const EdgeInsets.only(bottom: 15),
@@ -193,18 +206,17 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                                               snapshot.data!.articles![index]
                                                   .source!.name
                                                   .toString(),
-                                              maxLines: 3,
                                               overflow: TextOverflow.ellipsis,
                                               style: GoogleFonts.poppins(
                                                 color: Colors.blue,
-                                                fontSize: 14,
+                                                fontSize: 11,
                                                 fontWeight: FontWeight.w700,
                                               ),
                                             ),
                                             Text(
                                               format.format(dateTime),
                                               style: GoogleFonts.poppins(
-                                                fontSize: 15,
+                                                fontSize: 11,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),

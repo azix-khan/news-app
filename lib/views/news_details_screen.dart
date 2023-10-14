@@ -37,6 +37,14 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leading: InkWell(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: const Icon(
+              Icons.arrow_back_ios_new,
+              color: Colors.black,
+            )),
       ),
       body: Stack(
         children: [
@@ -106,7 +114,15 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                   height: height * .03,
                 ),
                 Text(
-                  widget.description,
+                  'Description:\n${widget.description}',
+                  style: GoogleFonts.poppins(
+                      fontSize: 15,
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w500),
+                ),
+                const Divider(),
+                Text(
+                  'Content:\n${widget.content}',
                   style: GoogleFonts.poppins(
                       fontSize: 15,
                       color: Colors.black87,
