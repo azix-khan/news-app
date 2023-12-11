@@ -22,28 +22,28 @@ Welcome to NewsApp, your go-to source for staying informed about the latest news
 ## Images
 
 <p align="center">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/23390574-4524-4bd5-99f4-aedf6f1522a4.png">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/10691a08-9b8c-47f0-8944-d6f04fba8ed5.png">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/7cc45688-1ec8-4eec-88dd-bc5bbe27b3ac">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/c9911ba2-e5af-41a1-94ee-21e9877a97ef">
 </p>
 
 <p align="center">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/bcf7b97a-a356-4c69-9967-45ba222437dd.png">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/aad2944f-6ad4-460c-8e5b-620bcee8fc4d.png">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/4fdf4039-5dae-4f6e-89c7-755c0c6c04b0">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/4dbd57fb-1b4c-40a5-9592-fdbf7584c1f7">
 </p>
 
 <p align="center">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/aa03919b-c291-453b-94a7-363f19cccdae.png">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/25f23589-90a1-4535-8357-cfe5eb9b708a.png">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/3349fd91-1b1f-4ce8-9a51-c02247897164">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/6d7936c6-a566-432f-b45a-be27d173c374">
 </p>
 
 <p align="center">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/9d4e22e9-050b-4331-bdf1-d6d6087fe160.png">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/f5bc23a5-7513-4d13-bc96-d96f6aa33f8d.png">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/9923ae9f-83fa-4826-a8e2-a1943676ce48">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/f217c8d6-0bb8-4100-a9d4-1c12d5380e31">
 </p>
 
 <p align="center">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/a628438f-e971-44e9-abcb-bf84f76be5e1.png">
-  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/23390574-4524-4bd5-99f4-aedf6f1522a4.png">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/09e1cfea-5de5-4eb0-a067-e236e4057eda">
+  <img width="300" src="https://github.com/azix-khan/news-app/assets/138978130/7cc45688-1ec8-4eec-88dd-bc5bbe27b3ac">
 </p>
 
 ## Getting Started
